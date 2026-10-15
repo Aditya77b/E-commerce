@@ -1,0 +1,22 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: forma-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: shopdb
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-local_root_password}
+      MYSQL_USER: ${MYSQL_USER:-forma_app}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-forma_dev_password}
+    ports:
+      - "3306:3306"
+    volumes:
+      - forma-mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p${MYSQL_PASSWORD:-password}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  forma-mysql-data:

@@ -1,0 +1,14 @@
+com\forma\store\order\CreateOrderRequest.class
+com\forma\store\product\ProductRepository.class
+com\forma\store\order\ShopOrder.class
+com\forma\store\product\ProductController.class
+com\forma\store\order\OrderService.class
+com\forma\store\product\Product.class
+com\forma\store\order\ShopOrderRepository.class
+com\forma\store\order\OrderResponse.class
+com\forma\store\order\ShopOrderController.class
+com\forma\store\order\OrderLineRequest.class
+com\forma\store\order\OrderItem.class
+com\forma\store\product\SampleProducts.class
+com\forma\store\StoreApiApplication.class
+com\forma\store\config\ApiExceptionHandler.class
